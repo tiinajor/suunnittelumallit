@@ -20,7 +20,7 @@ public class AMKF extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        //ASDASD Testi porkkana
+        
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
@@ -31,7 +31,9 @@ public class AMKF extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("TESTI");
         launch(args);
+        
     }
     
 }
