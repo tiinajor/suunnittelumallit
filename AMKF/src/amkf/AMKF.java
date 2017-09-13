@@ -22,7 +22,7 @@ public class AMKF extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
-        //testi
+        //testi EI VARMANA MUUTEN TOIMI
         stage.setScene(scene);
         stage.show();
     }
