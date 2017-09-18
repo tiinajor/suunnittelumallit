@@ -43,5 +43,61 @@ public class FXMLDocumentController implements Initializable {
         stage.show();
         System.out.println("Scene vaihdettu");
     }
+    
+    @FXML
+    public void whiteButton(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("indexMusta.fxml"));/* Exception */
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        System.out.println("Scene vaihdettu");
+    }
+    
+    @FXML
+    public void petrolButton(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("indexPetrol.fxml"));/* Exception */
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        System.out.println("Scene vaihdettu");
+    }
+    
+        @FXML
+    public void purpleButton(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("indexPurple.fxml"));/* Exception */
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        System.out.println("Scene vaihdettu");
+    }
+
+    
+            @FXML
+    public void greenButton(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("indexGreen.fxml"));/* Exception */
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        System.out.println("Scene vaihdettu");
+    }
+    
+                @FXML
+    public void ala(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("alaPaina.fxml"));/* Exception */
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        System.out.println("Scene vaihdettu");
+    }
 
 }
