@@ -6,23 +6,29 @@
 package amkf;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 
 /**
  *
  * @author Samuli Käkönen
  */
 public class AMKF extends Application {
-    
+
+    Parent root;
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        
+        root = FXMLLoader.load(getClass().getResource("indexMusta.fxml"));
+
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        scene.getStylesheets().add("style.css");
         stage.show();
     }
 
@@ -32,7 +38,11 @@ public class AMKF extends Application {
     public static void main(String[] args) {
         System.out.println("TESTI");
         launch(args);
-        
+
     }
+
     
+    
+    
+
 }
