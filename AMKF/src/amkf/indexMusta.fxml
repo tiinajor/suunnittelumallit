@@ -7,39 +7,38 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="759.0" prefWidth="1051.0" style="-fx-background-color: #1e1d1f;" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amkf.FXMLDocumentController">
     <children>
       <Pane id="banneri" layoutY="7.0" prefHeight="181.0" prefWidth="1051.0" style="-fx-background-color: white;" styleClass="banneri" stylesheets="@style.css">
          <children>
             <Text fill="#1e1d1f" layoutX="380.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AMKF">
                <font>
-                  <Font name="Cinzel Bold" size="96.0" />
+                  <Font name="Cinzel Black" size="96.0" />
                </font>
             </Text>
          </children></Pane>
       <Pane layoutY="193.0" prefHeight="12.0" prefWidth="1051.0" style="-fx-background-color: white;" />
-      <Button id="button" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" layoutY="210.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="265.0" scaleShape="false" style="-fx-background-color: white; -fx-background-radius: 0;" text="Etusivu" textFill="#1e1d1f">
+      <Button id="navi.button" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" layoutY="210.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="265.0" scaleShape="false" style="-fx-background-radius: 0; -fx-background-color: white;" styleClass="navi.button" stylesheets="@style.css" text="Etusivu" textFill="#1e1d1f">
          <font>
             <Font name="Frank Ruhl Libre Regular" size="18.0" />
          </font>
       </Button>
-      <Button id="button" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" layoutY="268.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="265.0" scaleShape="false" style="-fx-background-color: white; -fx-background-radius: 0;" text="Homoli" textFill="#1e1d1f">
+      <Button id="navi.button" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" layoutY="268.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="265.0" scaleShape="false" style="-fx-background-radius: 0; -fx-background-color: white;" text="Homoli" textFill="#1e1d1f">
          <font>
             <Font name="Frank Ruhl Libre Regular" size="18.0" />
          </font>
       </Button>
-      <Button id="button" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" layoutY="326.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="265.0" scaleShape="false" style="-fx-background-color: white; -fx-background-radius: 0;" text="Kikuli" textFill="#1e1d1f">
+      <Button id="navi.button" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" layoutY="326.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="265.0" scaleShape="false" style="-fx-background-radius: 0; -fx-background-color: white;" text="Kikuli" textFill="#1e1d1f">
          <font>
             <Font name="Frank Ruhl Libre Regular" size="18.0" />
          </font>
       </Button>
-      <Button id="button" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" layoutY="384.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="265.0" scaleShape="false" style="-fx-background-color: white; -fx-background-radius: 0;" text="Mikuli" textFill="#1e1d1f">
+      <Button id="navi.button" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" layoutY="384.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="265.0" scaleShape="false" style="-fx-background-radius: 0; -fx-background-color: white;" text="Mikuli" textFill="#1e1d1f">
          <font>
             <Font name="Frank Ruhl Libre Regular" size="18.0" />
          </font>
       </Button>
-      <Button id="button" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" layoutY="442.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="265.0" scaleShape="false" style="-fx-background-color: white; -fx-background-radius: 0;" text="Geez Rick" textFill="#1e1d1f">
+      <Button id="navi.button" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" layoutY="442.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="265.0" scaleShape="false" style="-fx-background-radius: 0; -fx-background-color: white;" text="Geez Rick" textFill="#1e1d1f">
          <font>
             <Font name="Frank Ruhl Libre Regular" size="18.0" />
          </font>
@@ -53,7 +52,7 @@
             </Text>
          </children>
       </Pane>
-      <Button layoutX="124.0" layoutY="502.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="20.0" style="-fx-background-color: f544ac;">
+      <Button layoutX="124.0" layoutY="502.0" mnemonicParsing="false" onAction="#pinkButton" prefHeight="0.0" prefWidth="20.0" style="-fx-background-color: f544ac;">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -69,7 +68,7 @@
             <Font size="8.0" />
          </font>
       </Button>
-      <Button layoutX="66.0" layoutY="502.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="20.0" style="-fx-background-color: #1e1d1f;">
+      <Button layoutX="66.0" layoutY="502.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="20.0" style="-fx-background-color: white;">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
