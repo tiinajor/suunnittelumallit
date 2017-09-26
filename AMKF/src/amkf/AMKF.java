@@ -36,7 +36,6 @@ public class AMKF extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("TESTI");
         launch(args);
 
     }
