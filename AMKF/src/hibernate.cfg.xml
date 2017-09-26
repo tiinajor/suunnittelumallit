@@ -12,7 +12,7 @@
    </property>
 
    <property name="hibernate.connection.url">
-      jdbc:mysql://localhost:3306/amkftest
+      jdbc:mysql://localhost:2280/amkfkanta
    </property>
    <property name="hibernate.connection.username">
       olso
