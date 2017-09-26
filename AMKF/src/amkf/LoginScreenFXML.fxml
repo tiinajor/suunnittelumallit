@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="598.0" prefWidth="860.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller.LoginScreenFXMLController">
+   <children>
+      <Text layoutX="192.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ammattikorkeakoulu-finder">
+         <font>
+            <Font name="Calibri" size="42.0" />
+         </font>
+      </Text>
+      <Pane layoutX="134.0" layoutY="186.0" prefHeight="339.0" prefWidth="592.0">
+         <children>
+            <Text layoutX="125.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asuinalue:">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Text>
+            <Text layoutX="149.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etunimi: ">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Text>
+            <Text layoutX="134.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sukunimi: ">
+               <font>
+                  <Font name="Calibri" size="26.0" />
+               </font>
+            </Text>
+            <TextField fx:id="etunimi" layoutX="244.0" layoutY="71.0" />
+            <TextField fx:id="sukunimi" layoutX="244.0" layoutY="112.0" />
+            <TextField fx:id="asuinalue" layoutX="244.0" layoutY="153.0" />
+            <Button layoutX="222.0" layoutY="231.0" mnemonicParsing="false" onAction="#kirjauduNappula" text="Kirjaudu">
+               <font>
+                  <Font name="Calibri" size="31.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
