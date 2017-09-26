@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class AMKFKone implements AMKFKone_IF {
     private HibisDB_IF dao = new HibisDB();
     private Koulutus[] koulutukset;
+    private Asuinalue[] asuinalueet;
     
     @Override
     public String[] getKoulutukset(){
@@ -40,6 +41,18 @@ public class AMKFKone implements AMKFKone_IF {
     @Override
     public void lisääPisteitä(int pisteet, String tagi){
         dao.lisääPisteitä(pisteet, tagi);
+    }
+    
+    @Override
+    public String[] getAsuinalueet(){
+        ArrayList<String> alueTaul = new ArrayList();
+        asuinalueet = dao.readAsuinalueet();
+        for(int i = 0; i < asuinalueet.length; i++){
+            String asuinalue = asuinalueet[i].getNimi();
+            alueTaul.add(asuinalue);
+        }
+        String[] alueStrTaul = alueTaul.toArray(new String[alueTaul.size()]);
+        return alueStrTaul;
     }
     
 }

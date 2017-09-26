@@ -17,4 +17,5 @@ public interface HibisDB_IF {
     public abstract boolean lisääPisteitä(int pisteet, String tagi);
     public abstract void resetAllPisteet();
     public abstract Koulutus[] getTopKoulutukset(int topMäärä);
+    public abstract Asuinalue[] readAsuinalueet();
 }

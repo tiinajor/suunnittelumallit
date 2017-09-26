@@ -91,6 +91,26 @@ public class HibisDB implements HibisDB_IF {
 
         return mielenkLista;
     }
+    @Override
+    public Asuinalue[] readAsuinalueet(){
+        Asuinalue[] asAlueLista = null;
+        try {
+            istunto = istuntotehdas.openSession();
+            istunto.beginTransaction();
+            @SuppressWarnings("unchecked")
+            List<Mielenkiinto> result = istunto.createQuery("from Asuinalue").getResultList();
+            istunto.getTransaction().commit();
+            asAlueLista = result.toArray(new Asuinalue[result.size()]);
+        } catch (Exception e){
+            if (transaktio != null) {
+                transaktio.rollback();
+            }
+            e.printStackTrace();
+        }finally{
+            istunto.close();
+        }
+        return asAlueLista;
+    }
     
     @Override
     public boolean lisääPisteitä(int pisteet, String tagi) {
@@ -171,5 +191,7 @@ public class HibisDB implements HibisDB_IF {
         String[] tagit = koulutus.getTagit().split(" ");
         return tagit;
     }
+    
+    
 
 }
