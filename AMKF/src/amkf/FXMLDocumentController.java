@@ -8,6 +8,7 @@ package amkf;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import static javafx.application.Application.setUserAgentStylesheet;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
@@ -24,6 +26,9 @@ import javafx.stage.Stage;
  * @author Samuli Käkönen
  */
 public class FXMLDocumentController implements Initializable {
+    
+    
+    
 
     @FXML
     private Label label;
@@ -35,15 +40,18 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     public void pinkButton(ActionEvent event) throws IOException {
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("indexPinkki.fxml"));/* Exception */
+
+
+        Parent root = FXMLLoader.load(getClass().getResource("indexMusta.fxml"));/* Exception */
         Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-        System.out.println("Scene vaihdettu");
+        scene.getStylesheets().clear();
+        System.out.println("lol");
+        
+        
+  
+
     }
-    
+
     @FXML
     public void whiteButton(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
@@ -54,7 +62,7 @@ public class FXMLDocumentController implements Initializable {
         stage.show();
         System.out.println("Scene vaihdettu");
     }
-    
+
     @FXML
     public void petrolButton(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
@@ -65,8 +73,8 @@ public class FXMLDocumentController implements Initializable {
         stage.show();
         System.out.println("Scene vaihdettu");
     }
-    
-        @FXML
+
+    @FXML
     public void purpleButton(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -77,8 +85,7 @@ public class FXMLDocumentController implements Initializable {
         System.out.println("Scene vaihdettu");
     }
 
-    
-            @FXML
+    @FXML
     public void greenButton(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -88,8 +95,8 @@ public class FXMLDocumentController implements Initializable {
         stage.show();
         System.out.println("Scene vaihdettu");
     }
-    
-                @FXML
+
+    @FXML
     public void ala(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -98,6 +105,17 @@ public class FXMLDocumentController implements Initializable {
         stage.setScene(scene);
         stage.show();
         System.out.println("Scene vaihdettu");
+    }
+
+    @FXML
+    public javafx.scene.control.Button closeButton;
+
+    @FXML
+    public void closeButtonAction() {
+        // get a handle to the stage
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        // do what you have to do
+        stage.close();
     }
 
 }
