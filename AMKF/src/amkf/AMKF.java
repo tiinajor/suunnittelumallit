@@ -33,7 +33,7 @@ public class AMKF extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        root = FXMLLoader.load(getClass().getResource("indexMusta.fxml"));
+        root = FXMLLoader.load(getClass().getResource("index.fxml"));
 
 
 

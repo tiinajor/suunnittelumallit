@@ -24,7 +24,7 @@
       </ImageView>
    </top>
    <center>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <BorderPane maxWidth="1093.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <top>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
