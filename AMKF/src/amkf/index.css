@@ -1,0 +1,17 @@
+.button{
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-text-fill: #1e1d1f;
+    -fx-font: 18px "Frank Ruhl Libre";
+    -fx-pref-height: 50px;
+    -fx-pref-width: 300px;
+}
+.BorderPane{
+    -fx-background-color: #1e1d1f;
+    -fx-font: 24px "Frank Ruhl Libre";
+    -fx-text-fill: #1e1d1f;
+}
+
+.viiva{
+    -fx-background-color: white;
+}

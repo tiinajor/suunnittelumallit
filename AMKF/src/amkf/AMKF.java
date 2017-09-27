@@ -33,13 +33,19 @@ public class AMKF extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        root = FXMLLoader.load(getClass().getResource("indexMusta.fxml"));
 
-        Scene scene = new Scene(root);
+
+
+        final Scene scene = new Scene(root);
         stage.setScene(scene);
         scene.getStylesheets().add("style.css");
         //scene.getStylesheets().add("style.css");
         stage.show();
+        stage.setMaximized(true);
+        stage.setFullScreen(true);
+
+
     }
 
     /**
@@ -50,9 +56,5 @@ public class AMKF extends Application {
         launch(args);
 
     }
-
-    
-    
-    
 
 }
