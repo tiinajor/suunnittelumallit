@@ -22,7 +22,7 @@ import javafx.stage.Stage;
  *
  * @author Samuli Käkönen
  */
-public class LoginScreenFXMLController implements Initializable {
+public class EkaKyselyController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -31,16 +31,16 @@ public class LoginScreenFXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-    
+
     @FXML
-    public void kirjauduNappula(ActionEvent event) throws IOException {
+    public void listaaVaihtoehdot(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/amkf/ekaKysely.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/amkf/indexMusta.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         
         System.out.println("Scene vaihdettu");
-    }
+    }    
     
 }

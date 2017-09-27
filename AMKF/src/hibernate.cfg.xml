@@ -29,7 +29,7 @@
    <mapping class="projdem.Pääaine"/>
    <mapping class="projdem.Koulu"/>
    <mapping class="projdem.Kampus"/>
-   <mapping class="projdem.Kaupunki"/>
+   <mapping class="projdem.Asuinalue"/>
 
 </session-factory>
 </hibernate-configuration>
