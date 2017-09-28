@@ -15,32 +15,53 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
+import model.AMKFKone;
+import model.AMKFKone_IF;
 
 /**
  * FXML Controller class
  *
  * @author Samuli Käkönen
  */
-public class LoginScreenFXMLController implements Initializable {
+public class LoginController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }
+    String[] maakunnat;
+
+    AMKFKone kone = new AMKFKone();
     
     @FXML
-    public void kirjauduNappula(ActionEvent event) throws IOException {
+    MenuButton maakuntaNappi;
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        //Hakee maakunnat tietokannasta
+        maakunnat = kone.getAsuinalueet();
+        
+        asetaMaakunnat(maakunnat);
+        maakuntaNappi.getStylesheets().add("/amkf/style.css");
+    }
+
+    @FXML
+    public void haeNappula(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/amkf/ekaKysely.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        
+
         System.out.println("Scene vaihdettu");
     }
     
+    //Asettaa tietokannasta haetut maakunnat valikkoon
+    public void asetaMaakunnat(String[] kunnat) {
+        for (int i = 0; i < kunnat.length; i++) {
+            MenuItem item = new MenuItem(kunnat[i]);
+            item.getStyleClass().add("menuItem");
+            maakuntaNappi.getItems().add(item);
+        }
+    }
+
 }

@@ -41,8 +41,10 @@ public class AMKF extends Application {
         final Scene scene = new Scene(root, Color.TRANSPARENT);
         stage.setScene(scene);
         scene.getStylesheets().add("style.css");
+
         scene.getStylesheets().add("index.css");
         scene.getStylesheets().add("index_pink.css");
+
         stage.show();
 
     }
@@ -51,9 +53,8 @@ public class AMKF extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("TESTI");
         launch(args);
-
+        
     }
 
 }

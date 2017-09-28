@@ -30,15 +30,12 @@ public class FXMLDocumentController implements Initializable {
     
     
 
-    @FXML
-    private Label label;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
 
-    @FXML
     public void pinkButton(ActionEvent event) throws IOException {
 
 
