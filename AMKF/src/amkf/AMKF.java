@@ -56,6 +56,7 @@ public class AMKF extends Application {
         //TESTI
         System.out.println("ÄÄÄ ÄÄÄÄ ÄÄÄÄ ÄÄÄÄ ÄÄÄÄ ÄÄÄÄÄ");
         System.out.println("TOINEN TESTI ÄÄÄÄÄÄÄÄÄÄ");
+        System.out.println("KOLMAS TESTII ÄÄÄÄÄÄÄÄÄÄ");
     }
 
 }
