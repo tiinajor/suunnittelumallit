@@ -32,6 +32,8 @@ public class AMKF extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        //TESTI
+        System.out.println("TESTI");
     }
     
 }
