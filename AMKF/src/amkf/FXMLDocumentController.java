@@ -25,15 +25,12 @@ import javafx.stage.Stage;
  */
 public class FXMLDocumentController implements Initializable {
 
-    @FXML
-    private Label label;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
 
-    @FXML
     public void pinkButton(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -43,8 +40,7 @@ public class FXMLDocumentController implements Initializable {
         stage.show();
         System.out.println("Scene vaihdettu");
     }
-    
-    @FXML
+
     public void whiteButton(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -54,8 +50,7 @@ public class FXMLDocumentController implements Initializable {
         stage.show();
         System.out.println("Scene vaihdettu");
     }
-    
-    @FXML
+
     public void petrolButton(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -65,8 +60,7 @@ public class FXMLDocumentController implements Initializable {
         stage.show();
         System.out.println("Scene vaihdettu");
     }
-    
-        @FXML
+
     public void purpleButton(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -77,8 +71,6 @@ public class FXMLDocumentController implements Initializable {
         System.out.println("Scene vaihdettu");
     }
 
-    
-            @FXML
     public void greenButton(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -88,8 +80,7 @@ public class FXMLDocumentController implements Initializable {
         stage.show();
         System.out.println("Scene vaihdettu");
     }
-    
-                @FXML
+
     public void ala(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();

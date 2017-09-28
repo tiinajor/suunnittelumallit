@@ -29,14 +29,14 @@
     -fx-text-fill: #1e1d1f;
     -fx-font: 18px "Frank Ruhl Libre";
     -fx-pref-height: 28px;
-    -fx-pref-width: 300px;
+    -fx-pref-width: 200px;
     -fx-text-alignment: center;
 }
 
 .menuItem{
     -fx-background-color: white;
     -fx-pref-height: 28px;
-    -fx-pref-width: 300px;
+    -fx-pref-width: 200px;
     -fx-text-alignment: center;
     -fx-text-fill: #1e1d1f;
 }
@@ -75,7 +75,7 @@
 
 .AnchorPane{
     -fx-background-color: white;
-    -fx-font: 24px "Frank Ruhl Libre";
+    -fx-font: 14px "Frank Ruhl Libre";
     -fx-text-fill: #1e1d1f;
 }
 

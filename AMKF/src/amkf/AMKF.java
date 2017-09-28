@@ -12,7 +12,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import javafx.application.*;
+import java.text.*;
+import java.util.*;
+import javafx.event.*;
+import javafx.scene.*;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.scene.input.*;
+import javafx.stage.*;
+import javafx.geometry.*;
 
 /**
  *
@@ -24,11 +33,12 @@ public class AMKF extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        root = FXMLLoader.load(getClass().getResource("kyselyFXML.fxml"));
+        root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
         scene.getStylesheets().add("style.css");
+        
         stage.show();
     }
 
@@ -36,9 +46,8 @@ public class AMKF extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("TESTI");
         launch(args);
-
+        
     }
 
     
