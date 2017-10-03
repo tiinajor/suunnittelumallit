@@ -31,7 +31,7 @@ public class LoginController implements Initializable {
     String[] maakunnat;
 
     AMKFKone kone = new AMKFKone();
-    
+
     @FXML
     MenuButton maakuntaNappi;
 
@@ -39,7 +39,7 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         //Hakee maakunnat tietokannasta
         maakunnat = kone.getAsuinalueet();
-        
+
         asetaMaakunnat(maakunnat);
         maakuntaNappi.getStylesheets().add("/amkf/style.css");
     }
@@ -48,13 +48,13 @@ public class LoginController implements Initializable {
     public void haeNappula(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/amkf/ekaKysely.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/amkf/indexMusta.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
 
         System.out.println("Scene vaihdettu");
     }
-    
+
     //Asettaa tietokannasta haetut maakunnat valikkoon
     public void asetaMaakunnat(String[] kunnat) {
         for (int i = 0; i < kunnat.length; i++) {
@@ -62,6 +62,17 @@ public class LoginController implements Initializable {
             item.getStyleClass().add("menuItem");
             maakuntaNappi.getItems().add(item);
         }
+    }
+
+    @FXML
+    public javafx.scene.control.Button closeButton;
+
+    @FXML
+    public void closeButtonAction() {
+        // get a handle to the stage
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        // do what you have to do
+        stage.close();
     }
 
 }
