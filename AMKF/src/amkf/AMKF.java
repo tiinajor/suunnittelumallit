@@ -22,6 +22,7 @@ import javafx.scene.layout.*;
 import javafx.scene.input.*;
 import javafx.stage.*;
 import javafx.geometry.*;
+import javafx.scene.paint.Color;
 
 /**
  *
@@ -33,18 +34,19 @@ public class AMKF extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+
+        stage.initStyle(StageStyle.TRANSPARENT);
         root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 
-
-
-        final Scene scene = new Scene(root);
+        final Scene scene = new Scene(root, Color.TRANSPARENT);
         stage.setScene(scene);
         scene.getStylesheets().add("style.css");
-        
-        stage.show();
-        stage.setMaximized(true);
-        //stage.setFullScreen(true);
 
+
+        scene.getStylesheets().add("index.css");
+        scene.getStylesheets().add("index_pink.css");
+
+        stage.show();
 
     }
 
