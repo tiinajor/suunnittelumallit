@@ -26,9 +26,6 @@ import javafx.stage.Stage;
  * @author Samuli Käkönen
  */
 public class FXMLDocumentController implements Initializable {
-    
-    
-    
 
 
     @Override

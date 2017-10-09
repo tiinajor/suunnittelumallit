@@ -142,23 +142,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="694.0" prefWidth="1106.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller.EkaKyselyController">
+<AnchorPane prefHeight="738.0" prefWidth="1093.0" styleClass="AnchorPane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EkaKyselyController">
    <children>
       <ScrollPane layoutX="50.0" layoutY="28.0" prefHeight="639.0" prefWidth="1007.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="627.0" prefWidth="1005.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="627.0" prefWidth="1004.0" styleClass="AnchorPane">
                <children>
-                  <VBox layoutX="255.0" layoutY="2.0" prefHeight="535.0" prefWidth="495.0">
+                  <VBox layoutX="126.0" layoutY="2.0" prefHeight="535.0" prefWidth="872.0">
                      <children>
                         <Pane prefHeight="90.0" prefWidth="1006.0">
                            <children>
-                              <Text layoutX="43.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kysymys 1">
+                              <Text layoutX="139.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="AnchorPane" text="Kysymys 1">
                                  <font>
                                     <Font size="44.0" />
                                  </font>
                               </Text>
-                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0">
+                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0" styleClass="menuButton">
                                  <contextMenu>
                                     <ContextMenu>
                                       <items>
@@ -171,12 +170,12 @@
                         </Pane>
                         <Pane prefHeight="90.0" prefWidth="1006.0">
                            <children>
-                              <Text layoutX="43.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kysymys 2">
+                              <Text layoutX="137.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="AnchorPane" text="Kysymys 2">
                                  <font>
                                     <Font size="44.0" />
                                  </font>
                               </Text>
-                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0">
+                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0" styleClass="menuButton">
                                  <contextMenu>
                                     <ContextMenu>
                                       <items>
@@ -189,12 +188,12 @@
                         </Pane>
                         <Pane prefHeight="90.0" prefWidth="1006.0">
                            <children>
-                              <Text layoutX="43.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kysymys 3">
+                              <Text layoutX="137.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="AnchorPane" text="Kysymys 3">
                                  <font>
                                     <Font size="44.0" />
                                  </font>
                               </Text>
-                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0">
+                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0" styleClass="menuButton">
                                  <contextMenu>
                                     <ContextMenu>
                                       <items>
@@ -207,12 +206,12 @@
                         </Pane>
                         <Pane prefHeight="90.0" prefWidth="1006.0">
                            <children>
-                              <Text layoutX="43.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kysymys 4">
+                              <Text layoutX="137.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="AnchorPane" text="Kysymys 4">
                                  <font>
                                     <Font size="44.0" />
                                  </font>
                               </Text>
-                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0">
+                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0" styleClass="menuButton">
                                  <contextMenu>
                                     <ContextMenu>
                                       <items>
@@ -225,12 +224,12 @@
                         </Pane>
                         <Pane prefHeight="90.0" prefWidth="1006.0">
                            <children>
-                              <Text layoutX="43.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kysymys 5">
+                              <Text layoutX="137.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="AnchorPane" text="Kysymys 5">
                                  <font>
                                     <Font size="44.0" />
                                  </font>
                               </Text>
-                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0">
+                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0" styleClass="menuButton">
                                  <contextMenu>
                                     <ContextMenu>
                                       <items>
@@ -243,12 +242,12 @@
                         </Pane>
                         <Pane prefHeight="90.0" prefWidth="1006.0">
                            <children>
-                              <Text layoutX="43.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kysymys 6">
+                              <Text layoutX="137.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="AnchorPane" text="Kysymys 6">
                                  <font>
                                     <Font size="44.0" />
                                  </font>
                               </Text>
-                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0">
+                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0" styleClass="menuButton">
                                  <contextMenu>
                                     <ContextMenu>
                                       <items>
@@ -261,12 +260,12 @@
                         </Pane>
                         <Pane prefHeight="90.0" prefWidth="1006.0">
                            <children>
-                              <Text layoutX="43.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kysymys 7">
+                              <Text layoutX="137.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="AnchorPane" text="Kysymys 7">
                                  <font>
                                     <Font size="44.0" />
                                  </font>
                               </Text>
-                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0">
+                              <ChoiceBox layoutX="295.0" layoutY="26.0" prefWidth="150.0" styleClass="menuButton">
                                  <contextMenu>
                                     <ContextMenu>
                                       <items>

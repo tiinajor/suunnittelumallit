@@ -42,7 +42,6 @@ public class AMKF extends Application {
         stage.setScene(scene);
         scene.getStylesheets().add("style.css");
 
-
         scene.getStylesheets().add("index.css");
         scene.getStylesheets().add("index_pink.css");
 
