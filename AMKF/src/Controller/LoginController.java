@@ -66,6 +66,9 @@ public class LoginController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         System.out.println("Scene vaihdettu");
+        
+        kone.sulje();
+        System.out.println("Tietokantayhteys suljettu");
     }
 
     //Asettaa tietokannasta haetut maakunnat valikkoon
