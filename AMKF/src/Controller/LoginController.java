@@ -21,7 +21,6 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.AMKFKone;
-import model.AMKFKone_IF;
 import model.Käyttäjä;
 
 /**
@@ -34,7 +33,6 @@ public class LoginController implements Initializable {
     private String[] maakunnat;
 
     private AMKFKone kone = new AMKFKone();
-
     private Käyttäjä kauttaja = new Käyttäjä();
 
     @FXML
@@ -56,9 +54,9 @@ public class LoginController implements Initializable {
 
     @FXML
     public void haeNappula(ActionEvent event) throws IOException {
+        
         //Hakee etunimi ja sukunimi kentistä tiedot ja asettaa ne Käyttäjä luokkaan
         kauttaja.setNimi(etunimi.getText() + " " + sukunimi.getText());
-
         System.out.println("Käyttäjän nimi: " + kauttaja.getNimi());
 
         //Seuraavan scenen lataus

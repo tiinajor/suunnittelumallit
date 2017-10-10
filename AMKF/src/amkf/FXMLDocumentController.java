@@ -30,22 +30,29 @@ import javafx.stage.Stage;
  */
 public class FXMLDocumentController implements Initializable {
 
+    @FXML
+    Button pinkButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
 
+    private final String theme1Url = getClass().getResource("index_pink.css").toExternalForm();
+    private final String theme2Url = getClass().getResource("index.css").toExternalForm();
+
     public void pinkButton(ActionEvent event) throws IOException {
 
-
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("indexMusta.fxml"));/* Exception */
         Scene scene = new Scene(root);
-        scene.getStylesheets().clear();
-        System.out.println("lol");
-        
-        
-  
+        scene.getStylesheets().remove(theme2Url);
+        System.out.println("scene stylesheets on button 1 click: " + scene.getStylesheets());
+        if (!scene.getStylesheets().contains(theme1Url)) {
+            scene.getStylesheets().add(theme1Url);
+        }
+        System.out.println("scene stylesheets on button 1 click: " + scene.getStylesheets());
 
     }
 
