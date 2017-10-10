@@ -31,20 +31,20 @@ import model.Käyttäjä;
  */
 public class LoginController implements Initializable {
 
-    String[] maakunnat;
+    private String[] maakunnat;
 
-    AMKFKone kone = new AMKFKone();
+    private AMKFKone kone = new AMKFKone();
 
-    Käyttäjä kauttaja = new Käyttäjä();
-
-    @FXML
-    MenuButton maakuntaNappi;
+    private Käyttäjä kauttaja = new Käyttäjä();
 
     @FXML
-    TextField etunimi;
+    private MenuButton maakuntaNappi;
 
     @FXML
-    TextField sukunimi;
+    private TextField etunimi;
+
+    @FXML
+    private TextField sukunimi;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -56,7 +56,6 @@ public class LoginController implements Initializable {
 
     @FXML
     public void haeNappula(ActionEvent event) throws IOException {
-
         //Hakee etunimi ja sukunimi kentistä tiedot ja asettaa ne Käyttäjä luokkaan
         kauttaja.setNimi(etunimi.getText() + " " + sukunimi.getText());
 
