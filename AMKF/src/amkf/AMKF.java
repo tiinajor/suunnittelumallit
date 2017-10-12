@@ -9,22 +9,28 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.scene.paint.Color;
+import javafx.stage.*;
 
 /**
  *
  * @author Samuli Käkönen
  */
 public class AMKF extends Application {
-    
+
+    Parent root;
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        //asdasdasdasdasd
-        Scene scene = new Scene(root);
-        
+
+        stage.initStyle(StageStyle.TRANSPARENT);
+        root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+
+        final Scene scene = new Scene(root, Color.TRANSPARENT);
         stage.setScene(scene);
+
         stage.show();
+
     }
 
     /**
@@ -32,6 +38,7 @@ public class AMKF extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        //jees box
     }
-    
+
 }
