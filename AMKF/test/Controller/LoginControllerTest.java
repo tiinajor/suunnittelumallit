@@ -58,6 +58,7 @@ public class LoginControllerTest {
         
         assertEquals("Maakuntien haku epäonnistui", maakunnat != null);
         
+        System.out.println("Eka testi");
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
