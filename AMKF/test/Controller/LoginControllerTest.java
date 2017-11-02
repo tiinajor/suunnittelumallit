@@ -55,11 +55,11 @@ public class LoginControllerTest {
         //instance.initialize(url, rb);
 
         String[] maakunnat = kone.getAsuinalueet();
-        
+        System.out.println("jotain testaus kommenttii höhö");
         assertEquals("Maakuntien haku epäonnistui", maakunnat != null);
         
+        System.out.println("Eka testi");
         // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
     }
 
     /**
