@@ -55,7 +55,7 @@ public class LoginControllerTest {
         //instance.initialize(url, rb);
 
         String[] maakunnat = kone.getAsuinalueet();
-        System.out.println("asdd");
+        System.out.println("jotain testaus kommenttii höhö");
         assertEquals("Maakuntien haku epäonnistui", maakunnat != null);
         
         System.out.println("Eka testi");
