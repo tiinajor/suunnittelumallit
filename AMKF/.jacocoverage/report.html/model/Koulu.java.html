@@ -5,11 +5,28 @@
  */
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 /**
  *
  * @author mikko
  */
-<span class="nc" id="L12">public class Koulu {</span>
+@Entity
+@Table(name=&quot;koulu&quot;)
+<span class="nc" id="L18">public class Koulu {</span>
+    
+    @Column(name=&quot;nimi&quot;)
+    private String nimi;
+    
+    @Id
+    @Column(name=&quot;ID&quot;)
+    private int id;
+    
+    
+    
+
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
