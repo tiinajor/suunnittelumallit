@@ -52,6 +52,7 @@ public class LoginController implements Initializable {
         maakuntaNappi.getStylesheets().add("/amkf/style.css");
     }
 
+    /**Syöttää käyttäjän tiedot tietokantaan ja avaa seuraavan ikkunan*/
     @FXML
     public void haeNappula(ActionEvent event) throws IOException {
         
@@ -71,7 +72,9 @@ public class LoginController implements Initializable {
         System.out.println("Tietokantayhteys suljettu");
     }
 
+    
     //Asettaa tietokannasta haetut maakunnat valikkoon
+    /**Asettaa tietokannasta haetut maakunnat valikkoon*/
     public void asetaMaakunnat(String[] kunnat) {
         for (int i = 0; i < kunnat.length; i++) {
             MenuItem item = new MenuItem(kunnat[i]);
@@ -90,6 +93,7 @@ public class LoginController implements Initializable {
     @FXML
     public javafx.scene.control.Button closeButton;
 
+    /**Sulkee ohjelman*/
     @FXML
     public void closeButtonAction() {
         // get a handle to the stage
