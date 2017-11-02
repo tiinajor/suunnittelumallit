@@ -21,6 +21,19 @@ public class Koulu {
     @Id
     @Column(name="ID")
     private int id;
+
+    public int getId() {
+        return id;
+    }
+    
+    
+    public String getNimi() {
+        return nimi;
+    }
+
+    public void setNimi(String nimi) {
+        this.nimi = nimi;
+    }
     
     
     

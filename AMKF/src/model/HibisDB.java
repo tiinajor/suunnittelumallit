@@ -59,7 +59,7 @@ public class HibisDB implements HibisDB_IF {
         } finally {
             istunto.close();
         }
-        return null;
+        return käyttäjä;
     }
     
     /**
