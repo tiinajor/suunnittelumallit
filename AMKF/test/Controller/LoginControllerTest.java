@@ -45,6 +45,12 @@ public class LoginControllerTest {
     /**
      * Test of initialize method, of class LoginController.
      */
+    
+    @Test
+    public void dummyTest() {
+        System.out.println("Dummy test");
+    }
+    
    /*@Test
     public void testInitialize() {
         AMKFKone kone = new AMKFKone();
