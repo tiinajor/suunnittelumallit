@@ -41,8 +41,6 @@ public class LoginController implements Initializable {
 
     private AMKFKone kone = new AMKFKone();
     private Käyttäjä kauttaja = new Käyttäjä();
-    
-    private String lang;
 
     @FXML
     private MenuButton maakuntaNappi;
@@ -62,12 +60,13 @@ public class LoginController implements Initializable {
     
     @FXML
     public javafx.scene.control.Button closeButton;
+    
+    String lang;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         //Kielipaketin lataus
         lang = "FI";
-        
         locale = new Locale("fi", "FI");
         eLocale = new Locale("et", "EE");
         messages = ResourceBundle.getBundle("Controller.MessagesBundle", locale);

@@ -8,6 +8,7 @@ package amkf;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.ResourceBundle;
 import static javafx.application.Application.setUserAgentStylesheet;
 import javafx.collections.ObservableList;
@@ -25,6 +26,7 @@ import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import model.Käyttäjä;
 
 /**
  *
@@ -32,8 +34,15 @@ import javafx.stage.Stage;
  */
 public class FXMLDocumentController implements Initializable {
 
+    
+    private Locale locale;
+    private Locale eLocale;
+    private ResourceBundle messages;
+    
     @FXML
     Button pinkButton;
+    @FXML
+    private Button changeLanguage;
     
     @FXML
     MenuButton kys1;
@@ -82,7 +91,9 @@ public class FXMLDocumentController implements Initializable {
     
     ArrayList<MenuButton> buttonit;
     
+    private Käyttäjä kauttaja = new Käyttäjä();
     
+    String lang;
     
     /*
     @FXML
@@ -92,6 +103,11 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        lang = "FI";
+        locale = new Locale("fi", "FI");
+        eLocale = new Locale("et", "EE");
+        messages = ResourceBundle.getBundle("Controller.MessagesBundle", locale);
+        
         buttonit = new ArrayList<MenuButton>();
         buttonit.add(kys1);
         buttonit.add(kys2);
@@ -200,6 +216,25 @@ public class FXMLDocumentController implements Initializable {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         // do what you have to do
         stage.close();
+    }
+    
+    @FXML
+    public void language(){
+        System.out.println("<<<<<<<<<<Kieli vaihdettu>>>>>>>>>>");
+        if (lang.equals("FI")) {
+            Locale.setDefault(eLocale);
+            messages = ResourceBundle.getBundle("Controller.MessagesBundle_ee_EST", Locale.getDefault());
+            lang = "EE";
+        }else if (lang.equals("EE")) {
+            Locale.setDefault(locale);
+            messages = ResourceBundle.getBundle("Controller.MessagesBundle_fi_FI", Locale.getDefault());
+            lang = "FI";
+        }
+        updateGUI();
+    }
+    
+    public void updateGUI() {
+        
     }
     
     public void kysOnAction() {
