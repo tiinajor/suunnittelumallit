@@ -25,6 +25,7 @@ import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import model.AMKFKone;
 
 /**
  *
@@ -34,6 +35,9 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     Button pinkButton;
+    
+    @FXML
+    Button kyselyValmis;
     
     @FXML
     MenuButton kys1;
@@ -81,6 +85,7 @@ public class FXMLDocumentController implements Initializable {
     MenuButton kys22;
     
     ArrayList<MenuButton> buttonit;
+    private AMKFKone kone;
     
     
     
@@ -92,6 +97,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        kone = new AMKFKone();
         buttonit = new ArrayList<MenuButton>();
         buttonit.add(kys1);
         buttonit.add(kys2);
@@ -116,6 +122,7 @@ public class FXMLDocumentController implements Initializable {
         buttonit.add(kys21);
         buttonit.add(kys22);
         kysOnAction();
+        valmisOnAction();
     }
 
     private final String theme1Url = getClass().getResource("index_pink.css").toExternalForm();
@@ -196,14 +203,26 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     public void closeButtonAction() {
+        
+        kone.resetPisteet();
+        kone.sulje();
+        System.out.println("Tietokantayhteys suljettu");
         // get a handle to the stage
         Stage stage = (Stage) closeButton.getScene().getWindow();
+        
         // do what you have to do
         stage.close();
+        
     }
     
     public void valmisOnAction(){
-        
+        System.out.println("Valmis kysely");
+        kyselyValmis.setOnAction(new EventHandler<ActionEvent>(){
+            public void handle(ActionEvent e) {
+                for(int i = 0; i < buttonit.size(); i++){
+                    lisääPisteitä(i);
+                }
+            }});
     }
     
    
@@ -236,6 +255,94 @@ public class FXMLDocumentController implements Initializable {
         
         }
 
+    }
+    
+    public void lisääPisteitä(int kysymysNumero){
+        System.out.println("Lisätään pisteitä");
+        String vastaus = "";
+        vastaus = buttonit.get(kysymysNumero).getText();
+        switch(kysymysNumero){
+            //Oletko matemaattisesti lahjakas?
+            case 0:
+                if(vastaus.equals("Kyllä")){
+                    kone.lisääPisteitä(8, "Matemaattinen");
+                    kone.lisääPisteitä(5, "Bisnes");
+                    kone.lisääPisteitä(4, "Tekninen");
+                    kone.lisääPisteitä(2, "Arkkitehti");
+                }
+                if(vastaus.equals("Ei")){
+                    kone.lisääPisteitä(-6, "Matemaattinen");
+                    kone.lisääPisteitä(-3, "Bisnes");
+                    kone.lisääPisteitä(-2, "Tekninen");
+                }
+                break;
+            //Oletko kielellisesti lahjakas?
+            case 1:
+                break;
+            //Koetko taidealat tärkeäksi?
+            case 2:
+                break;
+            //Oletko mielelläsi ihmisten kanssa tekemisissä?
+            case 3:
+                break;
+            //Haaveiletko työstä markkinoinnin tai mainostamisen parissa?
+            case 4:
+                break;
+            //Pidätkö muiden ihmisten auttamisesta?
+            case 5:
+                break;
+            //Haluatko tehdä töitä lasten ja nuorten parissa?
+            case 6:
+                break;
+            //Ovatko urheilu ja liikunta sinulle tärkeää?
+            case 7:
+                break;
+            //Oletko käytännöllinen ja kätevä käsistäsi?
+            case 8:
+                break;
+            //Tulevatko ystäväsi usein pyytämään sinulta apua ja neuvoa?
+            case 9:
+                break;
+            //Pidätkö esiintymisestä?
+            case 10:
+                break;
+            //Oletko valmis matkustelemaan työsi puolesta?
+            case 11:
+                break;
+            //Pidätkö ruoanlaitosta?
+            case 12:
+                break;
+            //Pidätkö teknisten asioiden parissa puuhailusta ja uusien laitteiden keksimisestä?
+            case 13:
+                break;
+            //Ovatko luonnontieteet lähellä sydäntäsi?
+            case 14:
+                break;
+            //Kiinnostaako sinua autot ja ajoneuvotekniikka?
+            case 15:
+                break;
+            //Vietätkö paljon aikaa tietokoneella?
+            case 16:
+                break;
+            //Pidätkö rakentamisesta ja arkkitehtuurista?
+            case 17:
+                break;
+            //Oletko sujuva puhumaan ja haaveilet myyntityöstä?
+            case 18:
+                break;
+            //Oletko pikkutarkka?
+            case 19:
+                break;
+            //Ovatko ympäristöasiat lähellä sydäntäsi?
+            case 20:
+                break;
+            //Oletko johtajatyyppiä?
+            case 21:
+                break;
+            default: System.out.println("Virhehomma");
+                break;
+                
+        }
     }
 
 }
