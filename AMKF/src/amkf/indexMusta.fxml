@@ -113,10 +113,10 @@
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Oletko pikkutarkka? " textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ovatko ympäristöasiat lähellä sydäntäsi? " textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Oletko johtajatyyppiä? " textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER" />
-                              <MenuButton fx:id="kys1" mnemonicParsing="false" styleClass="menuButton" text="Valitse" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                              <MenuButton fx:id="kys1" mnemonicParsing="false" styleClass="menuButton" text="Valitse" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
                                  <items>
                                     <MenuItem fx:id="kys1k" mnemonicParsing="false" styleClass="menuItem" text="Kyllä" />
-                                    <MenuItem fx:id="kys2e" mnemonicParsing="false" styleClass="menuItem" text="Ei" />
+                                    <MenuItem fx:id="kys1e" mnemonicParsing="false" styleClass="menuItem" text="Ei" />
                                  </items>
                               </MenuButton>
                               <MenuButton fx:id="kys8" mnemonicParsing="false" styleClass="menuButton" text="Valitse" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">

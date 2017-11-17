@@ -40,6 +40,7 @@ public class HibisDBTest {
     /**
      * Test of sulje method, of class HibisDB.
      */
+    /*
     @Test
     public void testSulje() {
         System.out.println("sulje");
@@ -48,54 +49,61 @@ public class HibisDBTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+    */
 
     /**
      * Test of readKäyttäjä method, of class HibisDB.
      */
+    
     @Test
     public void testReadKäyttäjä() {
         System.out.println("readK\u00e4ytt\u00e4j\u00e4");
-        int id = 0;
+        int id = 1;
         HibisDB instance = new HibisDB();
-        Käyttäjä expResult = null;
-        Käyttäjä result = instance.readKäyttäjä(id);
+        String expResult = "Mikko";
+        Käyttäjä käyttäjä = instance.readKäyttäjä(id);
+        String result = käyttäjä.getNimi();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
      * Test of readKoulu method, of class HibisDB.
      */
+    /*
     @Test
     public void testReadKoulu() {
         System.out.println("readKoulu");
-        int id = 0;
+        int id = 1;
         HibisDB instance = new HibisDB();
-        Koulu expResult = null;
-        Koulu result = instance.readKoulu(id);
+        String expResult = "Metropolia";
+        String result = instance.readKoulu(id).getNimi();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-
+    */
     /**
      * Test of readKoulutukset method, of class HibisDB.
      */
+    
     @Test
     public void testReadKoulutukset() {
         System.out.println("readKoulutukset");
         HibisDB instance = new HibisDB();
-        Koulutus[] expResult = null;
-        Koulutus[] result = instance.readKoulutukset();
-        assertArrayEquals(expResult, result);
+        String expResult = "Tieto- ja viestintätekniikka";
+        Koulutus[] koulutuslista = instance.readKoulutukset();
+        String result = koulutuslista[0].getNimi();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
+    
 
     /**
      * Test of readMielenkiinnot method, of class HibisDB.
      */
+    /*
     @Test
     public void testReadMielenkiinnot() {
         System.out.println("readMielenkiinnot");
@@ -107,40 +115,47 @@ public class HibisDBTest {
         
         fail("The test case is a prototype.");
     }
+    */
 
     /**
      * Test of readAsuinalueet method, of class HibisDB.
      */
+    
     @Test
     public void testReadAsuinalueet() {
         System.out.println("readAsuinalueet");
         HibisDB instance = new HibisDB();
-        Asuinalue[] expResult = null;
-        Asuinalue[] result = instance.readAsuinalueet();
-        assertArrayEquals(expResult, result);
+        String expResult = "Uusimaa";
+        Asuinalue[] asuinaluelista = instance.readAsuinalueet();
+        String result = asuinaluelista[0].getNimi();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
+    
 
     /**
      * Test of lisääPisteitä method, of class HibisDB.
      */
+    
     @Test
     public void testLisääPisteitä() {
         System.out.println("lis\u00e4\u00e4Pisteit\u00e4");
         int pisteet = 0;
-        String tagi = "";
+        String tagi = "Kielet";
         HibisDB instance = new HibisDB();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.lisääPisteitä(pisteet, tagi);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
+    
 
     /**
      * Test of resetAllPisteet method, of class HibisDB.
      */
+    /*
     @Test
     public void testResetAllPisteet() {
         System.out.println("resetAllPisteet");
@@ -149,10 +164,12 @@ public class HibisDBTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+    */
 
     /**
      * Test of getTopKoulutukset method, of class HibisDB.
      */
+    /*
     @Test
     public void testGetTopKoulutukset() {
         System.out.println("getTopKoulutukset");
@@ -164,10 +181,12 @@ public class HibisDBTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+    */
 
     /**
      * Test of erotteleTagit method, of class HibisDB.
      */
+    /*
     @Test
     public void testErotteleTagit() {
         System.out.println("erotteleTagit");
@@ -179,5 +198,6 @@ public class HibisDBTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+*/
     
 }
