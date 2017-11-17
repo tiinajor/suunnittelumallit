@@ -202,6 +202,12 @@ public class FXMLDocumentController implements Initializable {
         stage.close();
     }
     
+    public void valmisOnAction(){
+        
+    }
+    
+   
+    
     public void kysOnAction() {
 
         ObservableList<MenuItem> items;
