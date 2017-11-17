@@ -7,6 +7,7 @@ package Controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -16,9 +17,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.AMKFKone;
 import model.Käyttäjä;
@@ -31,25 +34,52 @@ import model.Käyttäjä;
 public class LoginController implements Initializable {
 
     private String[] maakunnat;
+    
+    private Locale locale;
+    private Locale eLocale;
+    private ResourceBundle messages;
 
     private AMKFKone kone = new AMKFKone();
     private Käyttäjä kauttaja = new Käyttäjä();
+    
+    private String lang;
 
     @FXML
     private MenuButton maakuntaNappi;
-
     @FXML
     private TextField etunimi;
-
     @FXML
     private TextField sukunimi;
+    
+    @FXML
+    private Text firstname;
+    @FXML
+    private Text lastname;
+    @FXML
+    private Button haeButton;
+    @FXML
+    private Button changeLanguage;
+    
+    @FXML
+    public javafx.scene.control.Button closeButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        //Kielipaketin lataus
+        lang = "FI";
+        
+        locale = new Locale("fi", "FI");
+        eLocale = new Locale("et", "EE");
+        messages = ResourceBundle.getBundle("Controller.MessagesBundle", locale);
+        
         //Hakee maakunnat tietokannasta
         maakunnat = kone.getAsuinalueet();
         asetaMaakunnat(maakunnat);
         maakuntaNappi.getStylesheets().add("/amkf/style.css");
+        
+        //Kieli jutut
+        updateGUI();
+        
     }
 
     /**Syöttää käyttäjän tiedot tietokantaan ja avaa seuraavan ikkunan*/
@@ -72,7 +102,6 @@ public class LoginController implements Initializable {
         System.out.println("Tietokantayhteys suljettu");
     }
 
-    
     //Asettaa tietokannasta haetut maakunnat valikkoon
     /**Asettaa tietokannasta haetut maakunnat valikkoon*/
     public void asetaMaakunnat(String[] kunnat) {
@@ -90,8 +119,31 @@ public class LoginController implements Initializable {
         }
     }
 
+    /**Vaihtaa ohjelman kieltä*/
     @FXML
-    public javafx.scene.control.Button closeButton;
+    public void language() {
+        System.out.println("<<<<<<<<<<Kieli vaihdettu>>>>>>>>>>");
+        if (lang.equals("FI")) {
+            Locale.setDefault(eLocale);
+            messages = ResourceBundle.getBundle("Controller.MessagesBundle_ee_EST", Locale.getDefault());
+            lang = "EE";
+        }else if (lang.equals("EE")) {
+            Locale.setDefault(locale);
+            messages = ResourceBundle.getBundle("Controller.MessagesBundle_fi_FI", Locale.getDefault());
+            lang = "FI";
+        }
+        updateGUI();
+    }
+    
+    public void updateGUI() {
+        maakuntaNappi.setText(messages.getString("region"));
+        firstname.setText(messages.getString("firstname"));
+        lastname.setText(messages.getString("lastname"));
+        haeButton.setText(messages.getString("submit"));
+        closeButton.setText(messages.getString("shutdown"));
+        changeLanguage.setText(messages.getString("language"));
+    }
+    
 
     /**Sulkee ohjelman*/
     @FXML
