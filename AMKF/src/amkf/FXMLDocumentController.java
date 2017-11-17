@@ -7,8 +7,10 @@ package amkf;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import static javafx.application.Application.setUserAgentStylesheet;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -32,10 +34,88 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     Button pinkButton;
+    
+    @FXML
+    MenuButton kys1;
+    @FXML
+    MenuButton kys2;
+    @FXML
+    MenuButton kys3;
+    @FXML
+    MenuButton kys4;
+    @FXML
+    MenuButton kys5;
+    @FXML
+    MenuButton kys6;
+    @FXML
+    MenuButton kys7;
+    @FXML
+    MenuButton kys8;
+    @FXML
+    MenuButton kys9;
+    @FXML
+    MenuButton kys10;
+    @FXML
+    MenuButton kys11;
+    @FXML
+    MenuButton kys12;
+    @FXML
+    MenuButton kys13;
+    @FXML
+    MenuButton kys14;
+    @FXML
+    MenuButton kys15;
+    @FXML
+    MenuButton kys16;
+    @FXML
+    MenuButton kys17;
+    @FXML
+    MenuButton kys18;
+    @FXML
+    MenuButton kys19;
+    @FXML
+    MenuButton kys20;
+    @FXML
+    MenuButton kys21;
+    @FXML
+    MenuButton kys22;
+    
+    ArrayList<MenuButton> buttonit;
+    
+    
+    
+    /*
+    @FXML
+    MenuItem kys1k;
+    */
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        buttonit = new ArrayList<MenuButton>();
+        buttonit.add(kys1);
+        buttonit.add(kys2);
+        buttonit.add(kys3);
+        buttonit.add(kys4);
+        buttonit.add(kys5);
+        buttonit.add(kys6);
+        buttonit.add(kys7);
+        buttonit.add(kys8);
+        buttonit.add(kys9);
+        buttonit.add(kys10);
+        buttonit.add(kys11);
+        buttonit.add(kys12);
+        buttonit.add(kys13);
+        buttonit.add(kys14);
+        buttonit.add(kys15);
+        buttonit.add(kys16);
+        buttonit.add(kys17);
+        buttonit.add(kys18);
+        buttonit.add(kys19);
+        buttonit.add(kys20);
+        buttonit.add(kys21);
+        buttonit.add(kys22);
+        kysOnAction();
     }
 
     private final String theme1Url = getClass().getResource("index_pink.css").toExternalForm();
@@ -123,15 +203,33 @@ public class FXMLDocumentController implements Initializable {
     }
     
     public void kysOnAction() {
-        MenuButton kys1 = new MenuButton("Valitse");
-        for (int i = 1; i < 22; i++) {
-            MenuItem kys1k = new MenuItem("Kyllä");
-            kys1k.setOnAction(new EventHandler<ActionEvent>() {
+
+        ObservableList<MenuItem> items;
+        for(int i = 0; i < 22; i++){
+            MenuButton käsiteltävä = buttonit.get(i);
+            items = käsiteltävä.getItems();
+            for(int j = 0; j < items.size(); j++){
+                if(j == 0){
+                items.get(j).setOnAction(new EventHandler<ActionEvent>() {
                 public void handle(ActionEvent e) {
-                    kys1.setText("Kyllä");
+                    käsiteltävä.setText("Kyllä");
+                    
                 }
             });
+                }else{
+                    items.get(j).setOnAction(new EventHandler<ActionEvent>() {
+                public void handle(ActionEvent e) {
+                    käsiteltävä.setText("Ei");
+                    
+                }
+            });
+                }
+
         }
+        
+        
+        }
+
     }
 
 }
