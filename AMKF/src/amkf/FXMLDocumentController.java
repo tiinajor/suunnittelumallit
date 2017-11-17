@@ -80,6 +80,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     MenuButton kys22;
     
+    ArrayList<MenuButton> buttonit;
     
     
     
@@ -91,6 +92,29 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        buttonit = new ArrayList<MenuButton>();
+        buttonit.add(kys1);
+        buttonit.add(kys2);
+        buttonit.add(kys3);
+        buttonit.add(kys4);
+        buttonit.add(kys5);
+        buttonit.add(kys6);
+        buttonit.add(kys7);
+        buttonit.add(kys8);
+        buttonit.add(kys9);
+        buttonit.add(kys10);
+        buttonit.add(kys11);
+        buttonit.add(kys12);
+        buttonit.add(kys13);
+        buttonit.add(kys14);
+        buttonit.add(kys15);
+        buttonit.add(kys16);
+        buttonit.add(kys17);
+        buttonit.add(kys18);
+        buttonit.add(kys19);
+        buttonit.add(kys20);
+        buttonit.add(kys21);
+        buttonit.add(kys22);
         kysOnAction();
     }
 
@@ -179,31 +203,7 @@ public class FXMLDocumentController implements Initializable {
     }
     
     public void kysOnAction() {
-        ArrayList<MenuButton> buttonit = new ArrayList<MenuButton>();
-        buttonit.add(kys1);
-        buttonit.add(kys2);
-        buttonit.add(kys3);
-        buttonit.add(kys4);
-        buttonit.add(kys5);
-        buttonit.add(kys6);
-        buttonit.add(kys7);
-        buttonit.add(kys8);
-        buttonit.add(kys9);
-        buttonit.add(kys10);
-        buttonit.add(kys11);
-        buttonit.add(kys12);
-        buttonit.add(kys13);
-        buttonit.add(kys14);
-        buttonit.add(kys15);
-        buttonit.add(kys16);
-        buttonit.add(kys17);
-        buttonit.add(kys18);
-        buttonit.add(kys19);
-        buttonit.add(kys20);
-        buttonit.add(kys21);
-        buttonit.add(kys22);
-        
-        
+
         ObservableList<MenuItem> items;
         for(int i = 0; i < 22; i++){
             MenuButton käsiteltävä = buttonit.get(i);
