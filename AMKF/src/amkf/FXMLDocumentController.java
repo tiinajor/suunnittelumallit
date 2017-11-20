@@ -241,8 +241,6 @@ public class FXMLDocumentController implements Initializable {
             }});
     }
     
-   
-    
     @FXML
     public void language(){
         System.out.println("<<<<<<<<<<Kieli vaihdettu>>>>>>>>>>");
