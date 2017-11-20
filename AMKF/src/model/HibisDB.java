@@ -63,9 +63,9 @@ public class HibisDB implements HibisDB_IF {
     }
     
     /**
-     * palauttaa Koulu-olion. Annetaan parametrina halutun koulun id
-     * @param id
-     * @return 
+     *  
+     * @param id Annetaan parametrina halutun koulun id
+     * @return palauttaa Koulu-olion.
      */
     @Override
     public Koulu readKoulu(int id){
@@ -73,8 +73,8 @@ public class HibisDB implements HibisDB_IF {
     }
     
     /**
-     * haetaan tietokannasta kaikki koulutus ja palautetaan ne Koulutus-olion taulukkona
-     * @return 
+     * haetaan tietokannasta kaikki koulutuskset.
+     * @return palautetaan ne Koulutus-olion taulukkona
      */
     @Override
     public Koulutus[] readKoulutukset() {
@@ -99,8 +99,8 @@ public class HibisDB implements HibisDB_IF {
     }
     
     /**
-     * Palauttaa Mielenkiinto-olio-taulukon kaikista mielenkiinnoista
-     * @return 
+     * 
+     * @return Palauttaa Mielenkiinto-olio-taulukon kaikista mielenkiinnoista
      */
     @Override
     public Mielenkiinto[] readMielenkiinnot() {
@@ -125,8 +125,8 @@ public class HibisDB implements HibisDB_IF {
     }
     
     /**
-     * Palauttaa Asuinalue-olio-taulukon kaikista asuinalueista
-     * @return 
+     * 
+     * @return Palauttaa Asuinalue-olio-taulukon kaikista asuinalueista
      */
     @Override
     public Asuinalue[] readAsuinalueet(){
@@ -154,10 +154,10 @@ public class HibisDB implements HibisDB_IF {
      * Lisätään Koulutus-tauluun pisteet-columniin pisteitä.
      * Parametrinä annetaan pisteiden määrä ja tagi. Annetaan pisteet kaikille koulutuksille, joilla on
      * kyseinen tagi.
-     * Palauttaa true, jos lisäys onnistui, falsen, jos ei.
-     * @param pisteet
-     * @param tagi
-     * @return 
+     * 
+     * @param pisteet pisteiden määrä.
+     * @param tagi tagi, jolle pisteet annetaan
+     * @return Palauttaa true, jos lisäys onnistui, falsen, jos ei.
      */
     @Override
     public boolean lisääPisteitä(int pisteet, String tagi) {
@@ -208,9 +208,9 @@ public class HibisDB implements HibisDB_IF {
     }
     /**
      * Antaa Koulutus-olio-taulukon eniten saaneista koulutuksista.
-     * Parametrinä annetaan määrä, kuinka monta koulutusta halutaan.
-     * @param topMäärä
-     * @return 
+     * 
+     * @param topMäärä Parametrinä annetaan määrä, kuinka monta koulutusta halutaan.
+     * @return Koulutus-taulukko
      */
     @Override
     public Koulutus[] getTopKoulutukset(int topMäärä) {
@@ -244,8 +244,8 @@ public class HibisDB implements HibisDB_IF {
     
     /**
      * Palauttaa string-taulukon Koulutus-olion tageista.
-     * @param koulutus
-     * @return 
+     * @param koulutus koulutus, jonka tagit halutaan erotella
+     * @return string-taulukko
      */
     public String[] erotteleTagit(Koulutus koulutus) {
         String[] tagit = koulutus.getTagit().split(" ");
