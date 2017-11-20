@@ -56,6 +56,7 @@ public class AMKFKone implements AMKFKone_IF {
     public void resetPisteet(){
         dao.resetAllPisteet();
     }
+    
     /**
      * 
      * @return palauttaa string-taulukon kaikista asuinalueista
