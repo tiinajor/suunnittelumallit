@@ -31,7 +31,7 @@ public class AMKFKone implements AMKFKone_IF {
     
     /**Antaa string-taulukkona tietyn määrän eniten pisteitä saaneita koulutuksia
     Parametrinä annetaan määrä, kuinka monta parasta koulutusta halutaan.
-    * @param määrä
+    * @param määrä Annetaan lukumäärä, montako koulutusta halutaan.
     */
     @Override
     public String[] getTopKoulutukset(int määrä){
@@ -45,17 +45,20 @@ public class AMKFKone implements AMKFKone_IF {
     
     /**Lisätään tietty määrä pisteitä koulutuksiin, jossa on tietty tagi
      * 
-     * @param pisteet
-     * @param tagi 
+     * @param pisteet montako pistettä annetaan.
+     * @param tagi mille tagille pisteet annetaan.
      */
     @Override
     public void lisääPisteitä(int pisteet, String tagi){
         dao.lisääPisteitä(pisteet, tagi);
     }
     
+    public void resetPisteet(){
+        dao.resetAllPisteet();
+    }
     /**
-     * palauttaa string-taulukon kaikista asuinalueista
-     * @return 
+     * 
+     * @return palauttaa string-taulukon kaikista asuinalueista
      */
     @Override
     public String[] getAsuinalueet(){
