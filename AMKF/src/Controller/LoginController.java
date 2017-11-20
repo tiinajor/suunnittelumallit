@@ -81,7 +81,10 @@ public class LoginController implements Initializable {
         
     }
 
-    /**Syöttää käyttäjän tiedot tietokantaan ja avaa seuraavan ikkunan*/
+    /**Syöttää käyttäjän tiedot tietokantaan ja avaa seuraavan ikkunan
+    * @param event ebin event
+    * @throws IOException tullee jos eei toemi
+    */
     @FXML
     public void haeNappula(ActionEvent event) throws IOException {
         
@@ -102,7 +105,9 @@ public class LoginController implements Initializable {
     }
 
     //Asettaa tietokannasta haetut maakunnat valikkoon
-    /**Asettaa tietokannasta haetut maakunnat valikkoon*/
+    /**Asettaa tietokannasta haetut maakunnat valikkoon
+    * @param kunnat Tietokannasta haetut maakunnat String taulukossa
+    */
     public void asetaMaakunnat(String[] kunnat) {
         for (int i = 0; i < kunnat.length; i++) {
             MenuItem item = new MenuItem(kunnat[i]);
@@ -124,16 +129,19 @@ public class LoginController implements Initializable {
         System.out.println("<<<<<<<<<<Kieli vaihdettu>>>>>>>>>>");
         if (lang.equals("FI")) {
             Locale.setDefault(eLocale);
-            messages = ResourceBundle.getBundle("Controller.MessagesBundle_ee_EST", Locale.getDefault());
+            messages = ResourceBundle.getBundle("properties.MessagesBundle_ee_EST", Locale.getDefault());
             lang = "EE";
         }else if (lang.equals("EE")) {
             Locale.setDefault(locale);
-            messages = ResourceBundle.getBundle("Controller.MessagesBundle_fi_FI", Locale.getDefault());
+            messages = ResourceBundle.getBundle("properties.MessagesBundle_fi_FI", Locale.getDefault());
             lang = "FI";
         }
         updateGUI();
     }
     
+    /**
+     * Päivittää käyttöliittymän
+     */
     public void updateGUI() {
         maakuntaNappi.setText(messages.getString("region"));
         firstname.setText(messages.getString("firstname"));
