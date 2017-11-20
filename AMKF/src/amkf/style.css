@@ -1,0 +1,85 @@
+.reunus{
+    -fx-border-color: #1e1d1f;
+    -fx-border-width: 5px;
+}
+
+.button{
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-color: #1e1d1f;
+    -fx-text-fill: #1e1d1f;
+    -fx-font: 18px "Frank Ruhl Libre";
+    -fx-pref-height: 28px;
+    -fx-pref-width: 300px;
+}
+
+.button:hover{
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, #cecece;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: #1e1d1f;
+
+}
+
+.menuButton{
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-color: #1e1d1f;
+    -fx-text-fill: #1e1d1f;
+    -fx-font: 18px "Frank Ruhl Libre";
+    -fx-pref-height: 28px;
+    -fx-pref-width: 300px;
+    -fx-text-alignment: center;
+}
+
+.menuItem {
+    -fx-background-color: white;
+    -fx-pref-height: 28px;
+    -fx-pref-width: 300px;
+    -fx-text-alignment: center;
+    -fx-text-fill: #1e1d1f;
+}
+
+.label-menuItem .label{
+      -fx-text-alignment:center; 
+}
+
+.menuItem:focused  {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, #cecece;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: #1e1d1f;
+}
+
+.menuItem:hover {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, #cecece;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: #1e1d1f;
+}
+
+
+
+.text-field {
+    -fx-background-color: #1e1d1f , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+.text-field:focused {
+    -fx-background-color: #1e1d1f , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+
+
+.AnchorPane{
+    -fx-background-color: white;
+    -fx-font: 24px "Frank Ruhl Libre";
+    -fx-text-fill: #1e1d1f;
+}
+
+.otsikko{
+    -fx-font: 70px "Cinzel Black";
+    -fx-text-fill: #1e1d1f;
+}
